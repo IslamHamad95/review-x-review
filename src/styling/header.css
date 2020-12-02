@@ -1,0 +1,65 @@
+*{
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  p{
+    font-family: 'Times New Roman', Times, serif;
+  
+  }
+  a{
+    text-decoration: none;
+    background-color:inherit;
+  
+    
+  }
+  a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #d38406;
+  }
+  
+  header{
+    width:90%;
+    background-color: black;
+    padding:1% 5%;
+    display: flex;
+    color: white;
+  }
+  
+  #logo{
+    background-color: inherit;
+    width: 100%;
+    margin-left:5% ;
+  }
+
+  .tabs, .auth{
+    display: flex; 
+    background-color: inherit;
+    margin-top: 2%;
+    
+  }
+  .tabs >*, .auth>*{
+    background-color:  inherit;
+    color: white;
+    font-size: 3vh;
+    font-weight: 700;
+  }
+
+  .tabs{
+    width:40%;
+    margin-left: 10%;
+  }
+  .auth{
+    width: fit-content;
+    margin-left: 19%;
+  }
+  
+  .tabs #contact-us, .tabs #add-post{
+    background-color: inherit;
+    margin-left: 20%;
+  
+   
+  }

@@ -1,0 +1,33 @@
+.show-post{
+  width: 100%;
+
+}
+
+.show-post .title-border{
+    background-image: url("../storage/loba.png");
+    background-color:rgba(255, 0, 0);
+    opacity: 0.8;
+    height: 50vh;
+    margin-bottom: 2%;
+}
+
+
+.show-post .title-border #post-title{
+    width:100%;
+    height: 50vh;
+   position: relative;
+   text-align: center;
+   line-height: 40vh;
+    font-size:7vh;
+    font-weight: bold;
+    color: white;
+    background-color:rgba(4, 131, 57, 0.8);;
+}
+
+.show-post #post-body{
+    font-size: 4vh;
+    overflow: hidden;
+    line-break: auto;
+    width: 70%;
+    margin: 2% 15%;
+}

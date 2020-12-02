@@ -1,0 +1,57 @@
+
+  
+  #add-post:hover, #contact-us:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .container{
+    width: 90%;
+    margin:5% 5%;
+  }
+  .container a{
+    text-decoration: none;
+  }
+  
+  .container .topic{
+  background-color:rgba(255, 193, 142, 0.5);
+  padding: 1.5%;
+  font-size: 2vh;
+  font-weight: bold;
+  margin-bottom:1% ;
+  border:1px solid white;
+  border-radius: 12px;
+  }
+  
+  
+  .container .topic #title {
+    font-size: 3vh;
+    margin-left: 1%;
+    color: green;
+    background:none;
+  }
+  .container .topic:hover{
+    background-color: #d38406;
+    color: white;
+    
+  }
+  .container .topic #title:hover{
+    color: white
+  }
+  
+   .pagination >* {
+    padding: 1%;
+    margin-left: 2%;
+    border: none;
+    font-size: 4vh;
+   
+    background:inherit
+   
+  }
+  
+  .pagination{
+  
+   background: none;
+  margin-left: 20%;
+    width: auto;
+  }

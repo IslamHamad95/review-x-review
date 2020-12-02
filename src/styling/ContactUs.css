@@ -1,0 +1,59 @@
+.contact-us-section{
+    background-color: rgb(240, 240, 240,0.2 );
+    padding: 1% 0%;
+
+  }
+.contact-us-form{
+    width:100%;
+    margin-top:2%;
+    background-color:inherit;
+}
+.contact-us-section #contact-us-title{
+    margin: 1% 5%;
+    font-size: 5vh;
+}
+.contact-us-form>*{
+    width: 40%;
+    margin-left: 5%;
+    background-color:inherit;
+}
+.contact-us-form input{
+    margin-bottom: 0.5%;
+}
+.contact-us-form label{
+    font-size: 3vh;
+    font-weight: bold;
+    padding: 1% 1% 0% 1%;
+}
+.contact-us-form input{
+    position: relative;
+    background-color: white;
+
+    border: solid black 1px;
+    padding:0.5%;
+    font-size: 2vh;
+    font-weight: 500;
+}
+
+.contact-us-form #message-input{
+    font-size: 2.5vh;
+    height: 20vh;
+    background-color: white;
+    padding: 0.5%;
+    resize: none;
+}
+
+.contact-us-form #submit-button{
+    width:10%;
+    font-size: 2vh;
+    font-weight: bold;
+    padding: 1%;
+    color: white;
+    background-color:green;
+    margin-top:0.5%
+}
+
+.contact-us-form #submit-button:hover{
+    background-color:  #d38406;
+
+}
