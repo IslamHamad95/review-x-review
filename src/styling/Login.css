@@ -1,0 +1,67 @@
+.login-signup-box{
+    width: 40%;
+    margin: 8% 30%;
+    border: 1px solid rgb(248, 248, 248);
+    border-radius: 15px;
+    background: rgb(243, 243, 243);
+    padding: 5% 0%;
+    
+}
+.login {
+    background:inherit
+}
+.login >* {
+    background:inherit
+}
+.login h1{
+    margin-left: 10%;
+    text-align: center;
+    font-size: 4vh;
+}
+.login-form{
+    display: grid;
+    width: 60%;
+    grid-template-columns: 15% 80%;
+    column-gap: 5%;
+    row-gap: 10%;
+    margin: 2% 19%;
+ 
+}
+.login-form > *{
+    background:inherit;
+    margin-bottom:2% ;
+}
+.login-form label{
+    font-size: 2vh;
+    padding-top: 12%;
+}
+.login-signup-box #email, .login-signup-box #password{
+    font-size: 2vh;
+    padding: 1.5%;
+    border-radius: 12px;
+    background-color: white;
+
+}
+
+.login .signup{
+    width: 50%;
+    margin-left: 37%;
+    font-size: 2vh;
+
+}
+.login #sign-in-button{
+    width:35%;
+    font-size: 2vh;
+    font-weight: bold;
+    padding: 2% 0%;
+    color: white;
+    background-color:green;
+    margin:0.5% 37%
+}
+ .fb-login{
+    margin-left: 37%;
+    margin-bottom: 1%;
+}
+.login #sign-in-button:hover{
+    background-color:  #d38406;
+}

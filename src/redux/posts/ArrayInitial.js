@@ -8,8 +8,8 @@ export const arrayInitalState = {
       body: initialPostBody,
       category: "News",
       author: "Islam Hamad",
-      photo:image,
-      date: new Date().toDateString()
+      photo: image,
+      date: new Date().toDateString(),
     },
     {
       id: "1",
@@ -18,7 +18,7 @@ export const arrayInitalState = {
       category: "News",
       author: "Islam Hamad",
       photo: image,
-      date: new Date().toDateString()
+      date: new Date().toDateString(),
     },
     {
       id: "2",
@@ -27,7 +27,7 @@ export const arrayInitalState = {
       category: "News",
       author: "Islam Hamad",
       photo: image,
-      date: new Date().toDateString()
+      date: new Date().toDateString(),
     },
 
     {
@@ -37,7 +37,7 @@ export const arrayInitalState = {
       category: "News",
       author: "Islam Hamad",
       photo: image,
-      date: new Date().toDateString()
+      date: new Date().toDateString(),
     },
 
     {
@@ -47,7 +47,7 @@ export const arrayInitalState = {
       category: "News",
       author: "Islam Hamad",
       photo: image,
-      date: new Date().toDateString()
-    }
-  ]
+      date: new Date().toDateString(),
+    },
+  ],
 };

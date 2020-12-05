@@ -8,6 +8,8 @@ import AddPost from "./components/AddPost";
 import { Provider } from "react-redux";
 import store from "./redux/store"
 import ContactUs from "./components/ContactUs";
+import Login from "./components/Login"
+import Footer from "./components/footer";
 
 const App = () => {
   return (
@@ -22,9 +24,11 @@ const App = () => {
         <Route path="/blog/post/:id" component={Topic}/>
         <Route path="/addpost" component={AddPost}/>
         <Route path="/contactus" component={ContactUs}/>
+        <Route path="/login" component={Login}/>
         </Switch>
         </div>
       </BrowserRouter>
+      <Footer/>
     </div>
     </Provider>
   );

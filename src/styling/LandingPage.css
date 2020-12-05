@@ -57,7 +57,7 @@
 .post-info{
   display: grid;
   width: 100%;
-  grid-template-columns: 10% 73% auto;
+  grid-template-columns: 15% 69% auto;
   background:inherit
 }
 .post-info>*{
