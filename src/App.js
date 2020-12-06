@@ -10,6 +10,7 @@ import store from "./redux/store"
 import ContactUs from "./components/ContactUs";
 import Login from "./components/Login"
 import Footer from "./components/footer";
+import Reviews from "./components/Reviews";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Switch>
         <Route path="/" exact component={LandingPage}></Route>
         <Route path ="/Blog" exact  component={Posts}/>
+        <Route path="/reviews" component={Reviews}/>
         <Route path="/blog/post/:id" component={Topic}/>
         <Route path="/addpost" component={AddPost}/>
         <Route path="/contactus" component={ContactUs}/>

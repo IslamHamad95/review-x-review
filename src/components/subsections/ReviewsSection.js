@@ -20,7 +20,7 @@ const ReviewsSection = ({postsArray}) => {
         console.log(gamingReviews[0].id);
         return (
           <div>
-            <h1 id="latest-news">LATEST Reviews</h1>
+            <h1 id="latest-news">LATEST REVIEWS</h1>
             <section className="latest-posts">
               {gamingReviews
                 .map((post) => (

@@ -16,9 +16,9 @@ const Header = () => {
         <NavLink to="/reviews" id="reviews">
         REVIEWS
       </NavLink>
-      <NavLink to="/podcast" id="podcast">
+      <a href="https://anchor.fm/checkpod" rel="noreferrer" target="_blank" id="podcast">
       PODCAST
-    </NavLink>
+    </a>
       </div>
 
       <div className="auth">

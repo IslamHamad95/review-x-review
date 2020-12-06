@@ -11,7 +11,7 @@ const Posts = ({ postsArray }) => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
 
   const currentPosts = postsArray
-    .filter((post) => post.category === "News")
+    .filter((post) => post.category === "Review")
     .slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (PageNumber) => {
@@ -22,7 +22,7 @@ const Posts = ({ postsArray }) => {
     <div>
       <section className="container">
         {currentPosts.map((post) => (
-          <Link key={post.id} to={`/blog/post/${post.id}`}>
+          <Link key={post.id} to={`/blog/review/${post.id}`}>
             <div className="topic">
               <div id="title">{post.title}</div>
             </div>
