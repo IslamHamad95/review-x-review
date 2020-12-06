@@ -35,8 +35,7 @@
     margin-left:5% ;
   }
 
-  .tabs, .auth{
-    display: flex; 
+  .tabs, .auth{ 
     background-color: inherit;
     margin-top: 2%;
     
@@ -49,12 +48,15 @@
   }
 
   .tabs{
-    width:40%;
-    margin-left: 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 20%;
+    width:auto;
+    margin-left: 15%;
   }
   .auth{
     width: fit-content;
-    margin-left: 19%;
+    margin-left: 34%;
   }
   
   .tabs #contact-us, .tabs #add-post{

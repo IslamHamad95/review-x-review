@@ -11,11 +11,14 @@ const Header = () => {
 
       <div className="tabs">
         <NavLink to="/Blog" id="blog">
-          BLOG
+          NEWS
         </NavLink>
-        <NavLink to="/addpost" id="add-post">
-          ADD POST
-        </NavLink>
+        <NavLink to="/reviews" id="reviews">
+        REVIEWS
+      </NavLink>
+      <NavLink to="/podcast" id="podcast">
+      PODCAST
+    </NavLink>
       </div>
 
       <div className="auth">

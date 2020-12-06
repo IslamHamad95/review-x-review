@@ -1,48 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import postImg from "../storage/loba.png";
-import landingImg from "../storage/landingPhoto.png";
-function LandingPage({ postsArray }) {
-  const [latestPosts, setLatestposts] = useState(postsArray);
+import React from "react";
+import NewsSection from "./subsections/NewsSection";
+import ReviewsSection from "./subsections/ReviewsSection";
 
-  useEffect(() => {
-    setLatestposts((latestPosts) =>
-      latestPosts.slice(latestPosts.length - 4).reverse()
-    );
-  }, []);
-
+function LandingPage() {
   return (
     <div className="landing-page-container">
-      <section className="landing-page-header">
-        <h1 id="landing-page-header-title">GAMING WEBSITE FOR GAMERS</h1>
-        <img id="landing-page-header-image" src={landingImg} />
-      </section>
-      <h1 id="latest-news">LATEST NEWS</h1>
-      <section className="latest-posts">
-        {latestPosts.map((post) => (
-          <div className="post-box" key={post.id}>
-            <Link to={`/blog/post/${post.id}`} key={post.id}>
-              <img id="post-image" src={postImg} />
-              <h1 id="post-title"> {post.title}</h1>
-            </Link>
-            <div className="post-info">
-              <h2 id="category">{post.category}</h2>
-              <h2 id="author">{post.author}</h2>
-              <h4 id="date">{post.date}</h4>
-            </div>
-          </div>
-        ))}
-      </section>
-      <br />
+      <NewsSection />
+      <ReviewsSection/>
     </div>
   );
 }
 
-const mapStatetoProps = (state) => {
-  return {
-    postsArray: state.postsArray,
-  };
-};
-
-export default connect(mapStatetoProps)(LandingPage);
+export default LandingPage;

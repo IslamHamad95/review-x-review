@@ -9,15 +9,17 @@
  #landing-page-header-image{
   width: 100%;
   height: 90vh;
-  opacity: 0.3;
   overflow: hidden;
 
 }
 #landing-page-header-title{
   font-size: 10vh;
   position: absolute;
-  margin:20% 10%;
-  width: fit-content;
+  margin-top:30%;
+  padding:2% 1%;
+  width:90%;
+  color: black;
+  background-color: rgb(255, 255, 255,0.6);
 }
 .landing-page-container #latest-news{
   margin-bottom: 1%;
