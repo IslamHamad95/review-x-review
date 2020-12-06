@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import postImg from "../../storage/loba.png";
+
 
 const ReviewsSection = ({postsArray}) => {
     const [gamingReviews, setGamingReviews] = useState([]);
@@ -26,7 +26,7 @@ const ReviewsSection = ({postsArray}) => {
                 .map((post) => (
                   <div className="post-box" key={post.id}>
                     <Link to={`/blog/post/${post.id}`} key={post.id}>
-                      <img id="post-image" src={postImg} alt={post.title} />
+                      <img id="post-image" src={post.photo} alt={post.title} />
                       <h1 id="post-title"> {post.title}</h1>
                     </Link>
                     <div className="post-info">

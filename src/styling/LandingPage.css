@@ -1,6 +1,7 @@
 
 .landing-page-container{
-  margin-bottom: 4%;
+  margin: 5% 0%;
+ 
 }
 .landing-page-container .landing-page-header{
   width: 100%;
@@ -10,6 +11,7 @@
   width: 100%;
   height: 90vh;
   overflow: hidden;
+  animation-name: slideInRight;
 
 }
 #landing-page-header-title{
@@ -20,11 +22,14 @@
   width:90%;
   color: black;
   background-color: rgb(255, 255, 255,0.6);
+  animation-name: slideInRight;
 }
 .landing-page-container #latest-news{
   margin-bottom: 1%;
   margin-left: 5%;
   margin-top: 2%;
+  
+
 }
 .landing-page-container .latest-posts {
   width: 95%;
@@ -37,6 +42,11 @@
 .landing-page-container .latest-posts .post-box {
   width: 100%;
   padding-bottom:4% ;
+  z-index: 0;
+}
+.post-box a{
+  text-decoration: none;
+  color: green;
 }
 .landing-page-container .latest-posts .post-box>*{
   background-color: inherit;
@@ -46,9 +56,9 @@
 }
 
 .landing-page-container img {
-  height: 40vh;
+  height: 45vh;
   width: 100%;
-  overflow: hidden;
+  
 }
 .latest-posts #post-title {
   font-size: 4vh;
@@ -66,9 +76,31 @@
   background:inherit;
 }
 #category{
-  color: green
+  color:#ad6b00
   
 }
 #date{
   color:gray;
+}
+#background-image{
+  width:auto;
+  height: 200%;
+  position: absolute;
+  top:120%;
+  left: 20%;
+  z-index: 0;
+  
+}
+
+/* animation*/
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }

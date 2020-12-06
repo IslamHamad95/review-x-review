@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import postImg from "../../storage/loba.png";
+import background from "../../storage/background.png"
 
 const NewsSection = ({ postsArray }) => {
   const [gamingNews, setGamingNews] = useState([]);
@@ -30,6 +31,7 @@ const NewsSection = ({ postsArray }) => {
             src={gamingNews[gamingNews.length - 1].photo}
           />
         </Link>
+
         <h1 id="latest-news">LATEST NEWS</h1>
         <section className="latest-posts">
           {gamingNews.map((post) => (

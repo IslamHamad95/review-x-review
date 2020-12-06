@@ -1,5 +1,6 @@
 import { initialPostBody } from "./InitalPostBody";
 import image from "../../storage/loba.png";
+import reviewImage from"../../storage/reviewPhoto.png"
 export const arrayInitalState = {
   postsArray: [
     {
@@ -55,7 +56,7 @@ export const arrayInitalState = {
     body: initialPostBody,
     category: "Review",
     author: "Islam Hamad",
-    photo: image,
+    photo: reviewImage,
     date: new Date().toDateString(),
   },
   {
@@ -64,7 +65,7 @@ export const arrayInitalState = {
     body: initialPostBody,
     category: "Review",
     author: "Islam Hamad",
-    photo: image,
+    photo: reviewImage,
     date: new Date().toDateString(),
   },
   {
@@ -73,7 +74,7 @@ export const arrayInitalState = {
     body: initialPostBody,
     category: "Review",
     author: "Islam Hamad",
-    photo: image,
+    photo: reviewImage,
     date: new Date().toDateString(),
   },
 
@@ -83,7 +84,7 @@ export const arrayInitalState = {
     body: initialPostBody,
     category: "Review",
     author: "Islam Hamad",
-    photo: image,
+    photo: reviewImage,
     date: new Date().toDateString(),
   },
 
@@ -93,7 +94,7 @@ export const arrayInitalState = {
     body: initialPostBody,
     category: "Review",
     author: "Islam Hamad",
-    photo: image,
+    photo: reviewImage,
     date: new Date().toDateString(),
   },
   ],
