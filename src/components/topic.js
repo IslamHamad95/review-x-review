@@ -22,7 +22,7 @@ const Topic = ({ postsArray, match }) => {
 };
 const mapStatetoProps = (state) => {
   return {
-    postsArray: state.postsArray,
+    postsArray: state.posts.postsArray,
   };
 };
 

@@ -9,6 +9,10 @@
     font-family: 'Times New Roman', Times, serif;
   
   }
+  button{
+    border:none;
+    background-color: inherit;
+  }
   a{
     text-decoration: none;
     background-color:inherit;
@@ -62,6 +66,7 @@
   .auth{
     width: fit-content;
     margin-left: 34%;
+    
   }
   
   .tabs #contact-us, .tabs #add-post{
@@ -69,4 +74,8 @@
     margin-left: 20%;
   
    
+  }
+
+  .auth #login-signup{
+    border: none;
   }

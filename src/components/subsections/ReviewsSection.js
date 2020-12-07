@@ -47,7 +47,7 @@ const ReviewsSection = ({postsArray}) => {
 
 const mapStatetoProps = (state) => {
     return {
-      postsArray: state.postsArray,
+      postsArray: state.posts.postsArray,
     };
   };
   

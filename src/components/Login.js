@@ -1,64 +1,49 @@
 import React, { useState } from "react";
-import FacebookLogin from "react-facebook-login";
 
-const Login = () => {
-  const [isLoggdIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState({
-    id: "",
-    name: "",
-  });
+const Login = ({popUpFun}) => {
+  const [user, setUser]=useState({
+    email: "",
+    password:""
+  })
 
-  let fbContent;
-
-  const componentClicked = () => {
-    console.log("clicked");
-  };
-
-  const responseFacebook = (response) => {
-    setIsLoggedIn({ isLoggdIn: true });
+  const userData=(e)=>{
     setUser({
       ...user,
-      id: response.id,
-      name: response.name,
-    });
-  };
-
-  if (isLoggdIn) {
-    fbContent = <h2 style={{ background: "inherit" }}>Welcome {user.name}</h2>;
-  } else {
-    fbContent = (
-      <FacebookLogin
-        appId="401647564370425"
-        autoLoad={true}
-        fields="name"
-        onClick={componentClicked}
-        callback={responseFacebook}
-      />
-    );
+      [e.target.name]:e.target.value
+    })
   }
+  const loginUser=(e)=>{
+    e.preventDefault()
+    console.log(user)
+    popUpFun()
+
+  }
+
 
   return (
     <div className="login-signup-box">
+    <div onClick={popUpFun} id="close-window">X</div>
       <section className="login">
         <h1>WELCOME BACK!</h1>
-        <div className="login-form">
+        <form className="login-form" onSubmit={loginUser}>
           <label>Email: </label>
-          <input id="email" type="email" />
+          <input name="email" id="email" type="email" required onChange={userData} value={user.email}/>
           <label>Password:</label>
-          <input id="password" type="password" />
-        </div>
-        <input id="sign-in-button" style={isLoggdIn? {display:"none"}:{display:"block"}} type="submit" value="Login" />
-       <a href="/"> <input id="sign-in-button" style={isLoggdIn? {display:"block"}:{display:"none"}} type="submit" value="Continue" />
-       </a> 
-       <div className="fb-login">{fbContent}</div>
+          <input name="password" id="password" type="password" onChange={userData} required value={user.password} />
+          <div></div>
+          <input  id="sign-in-button" type="submit" value="Login"  />
+        </form>
+       
+       
         <div className="signup">
-          <a href="#">Can't remember password</a>
+          <button>Can't remember password</button>
           <br />
-          <a href="#">Create new account</a>
+          <button>Create new account</button>
         </div>
       </section>
     </div>
   );
 };
 
-export default Login;
+
+export default (Login);

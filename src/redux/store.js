@@ -1,8 +1,8 @@
-import {createStore, applyMiddleware} from "redux"
-import arrayReducer from "./posts/ArrayReducer"
+import {createStore} from "redux"
+import rootReducer from "./rootReducer"
 
-import { composeWithDevTools } from 'redux-devtools-extension';
+//import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store=createStore(arrayReducer, composeWithDevTools(applyMiddleware()))
+const store=createStore(rootReducer)
 
 export default store
