@@ -1,5 +1,6 @@
 .show-post{
   width: 100%;
+  margin-top:6%;
 
 }
 
@@ -30,4 +31,34 @@
     line-break: auto;
     width: 70%;
     margin: 2% 15%;
+}
+
+.edit-delete-buttons {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 6%;
+    width: 10%; 
+    float: left;
+    margin-left: 2%;
+}
+
+#edit-button, #delete-button{
+    width: 100%;
+    font-size: 2.5vh;
+    font-weight: 600;
+    color: white;
+    padding:6% 6%;
+    border:2px solid black
+}
+#edit-button{
+    background-color: green;
+}
+#edit-button:hover{
+    background-color: rgb(2, 172, 2);
+}
+#delete-button{
+    background-color: rgb(168, 2, 2);
+}
+#delete-button:hover{
+    background-color: rgb(192, 4, 4);
 }
