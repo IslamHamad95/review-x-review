@@ -11,6 +11,7 @@ import ContactUs from "./components/ContactUs";
 import Login from "./components/Login"
 import Footer from "./components/footer";
 import Reviews from "./components/Reviews";
+import EditPost from "./components/EditPost";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/reviews" component={Reviews}/>
         <Route path="/blog/post/:id" component={Topic}/>
         <Route path="/addpost" component={AddPost}/>
+        <Route path="/editpost" component={EditPost}/>
         <Route path="/contactus" component={ContactUs}/>
         <Route path="/login" component={Login}/>
         </Switch>

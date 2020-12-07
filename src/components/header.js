@@ -45,12 +45,12 @@ const Header = ({ userEmail }) => {
           {userEmail ? (
             <div className="logged-in">
               <a href="/" id="login-signup">
-                Logout
+                SIGN OUT
               </a>
             </div>
           ) : (
             <button id="login-signup" onClick={togglePopUp}>
-              Login/Sign Up
+              SIGN IN
             </button>
           )}
         </div>
