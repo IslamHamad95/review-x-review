@@ -48,7 +48,7 @@ const Login = ({popUpFun,getUserData}) => {
   );
 };
 
-const mapDispatchToProps=(dispatch, ownProps)=>{
+const mapDispatchToProps=(dispatch)=>{
   const dispatchFunction=
   (user)=>dispatch(getUser(user))
   return{

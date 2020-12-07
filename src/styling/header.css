@@ -58,14 +58,15 @@
 
   .tabs{
     display: grid;
-    grid-template-columns: auto auto auto;
-    column-gap: 20%;
-    width:auto;
+    grid-template-columns: auto auto auto 45%;
+    column-gap: 15%;
+    width:20%;
+    padding-left: 2%;
     margin-left: 15%;
   }
   .auth{
     width: fit-content;
-    margin-left: 34%;
+    margin-left: 30%;
     
   }
   

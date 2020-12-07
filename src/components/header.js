@@ -32,6 +32,13 @@ const Header = ({ userEmail }) => {
           >
             PODCAST
           </a>
+          {userEmail ? (
+            <div className="logged-in">
+              <NavLink to="/addpost" id="login-signup">
+                ADD POST
+              </NavLink>
+            </div>
+          ) : null}
         </div>
 
         <div className="auth">
