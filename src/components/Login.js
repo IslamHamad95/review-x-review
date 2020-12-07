@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import {connect} from "react-redux"
+import {getUser} from "../redux/user/userActions"
 
-const Login = ({popUpFun}) => {
+const Login = ({popUpFun,getUserData}) => {
   const [user, setUser]=useState({
     email: "",
     password:""
@@ -15,6 +17,7 @@ const Login = ({popUpFun}) => {
   const loginUser=(e)=>{
     e.preventDefault()
     console.log(user)
+    getUserData(user)
     popUpFun()
 
   }
@@ -45,5 +48,13 @@ const Login = ({popUpFun}) => {
   );
 };
 
+const mapDispatchToProps=(dispatch, ownProps)=>{
+  const dispatchFunction=
+  (user)=>dispatch(getUser(user))
+  return{
+    getUserData:dispatchFunction
+  }
+}
 
-export default (Login);
+
+export default connect(null,mapDispatchToProps)(Login);
