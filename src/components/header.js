@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import {connect} from "react-redux"
+import { connect } from "react-redux";
 import logo from "../storage/logo.png";
 import Login from "./Login";
 
-const Header = ({userEmail}) => {
+const Header = ({ userEmail }) => {
   const [popUp, setPopUp] = useState(false);
   const togglePopUp = () => {
-    setPopUp(popUp=>popUp=!popUp);
+    setPopUp((popUp) => (popUp = !popUp));
   };
 
   return (
@@ -35,35 +35,28 @@ const Header = ({userEmail}) => {
         </div>
 
         <div className="auth">
-        {
-          (userEmail)?
-          (
-            <NavLink to="/addpost" id="login-signup">
-            Add Post
-          </NavLink>
-          ):
-          (
+          {userEmail ? (
+            <div className="logged-in">
+              <a href="/" id="login-signup">
+                Logout
+              </a>
+            </div>
+          ) : (
             <button id="login-signup" onClick={togglePopUp}>
-            Login/Sign Up
-          </button>
-          )
-        }
-
+              Login/Sign Up
+            </button>
+          )}
         </div>
       </header>
-      {
-        popUp? <Login popUpFun={togglePopUp}/>:null
-        
-      }
-      
+      {popUp ? <Login popUpFun={togglePopUp} /> : null}
     </div>
   );
 };
 
-const mapStatetoProps = state=>{
-  return{
-    userEmail: state.user.email
-  }
-}
+const mapStatetoProps = (state) => {
+  return {
+    userEmail: state.user.email,
+  };
+};
 
 export default connect(mapStatetoProps)(Header);

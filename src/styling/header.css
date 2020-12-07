@@ -49,7 +49,7 @@
     margin-top: 2%;
     
   }
-  .tabs >*, .auth>*{
+  .tabs >*, .auth>*, .logged-in>*{
     background-color:  inherit;
     color: white;
     font-size: 3vh;
@@ -79,3 +79,5 @@
   .auth #login-signup{
     border: none;
   }
+
+
