@@ -24,7 +24,7 @@ const Posts = ({ postsArray }) => {
         {currentPosts
           .reverse()
           .map((post) => (
-          <Link key={post.id} to={`/blog/review/${post.id}`}>
+          <Link key={post.id} to={`/review/${post.id}`}>
             <div className="topic">
               <div id="title">{post.title}</div>
             </div>

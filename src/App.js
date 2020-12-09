@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "./components/header";
 import {Route,BrowserRouter, Switch} from "react-router-dom";
-import Posts from "./components/posts"
-import Topic from "./components/topic"
 import LandingPage from "./components/LandingPage";
 import AddPost from "./components/AddPost";
 import { Provider } from "react-redux";
@@ -12,6 +10,9 @@ import Login from "./components/Login"
 import Footer from "./components/footer";
 import Reviews from "./components/Reviews";
 import EditPost from "./components/EditPost";
+import ShowNewsPost from "./components/ShowNewsPost";
+import ShowReviewPost from"./components/ShowReviewPost.js";
+import News from "./components/News";
 
 const App = () => {
   return (
@@ -22,9 +23,10 @@ const App = () => {
         <Header />
         <Switch>
         <Route path="/" exact component={LandingPage}></Route>
-        <Route path ="/Blog" exact  component={Posts}/>
+        <Route path="/news" exact  component={News}/>
         <Route path="/reviews" component={Reviews}/>
-        <Route path="/blog/post/:id" component={Topic}/>
+        <Route path="/news/:id" component={ShowNewsPost}/>
+        <Route path="/review/:id" component={ShowReviewPost}/>
         <Route path="/addpost" component={AddPost}/>
         <Route path="/editpost" component={EditPost}/>
         <Route path="/contactus" component={ContactUs}/>

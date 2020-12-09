@@ -18,7 +18,7 @@ const Header = ({ userEmail }) => {
         </NavLink>
 
         <div className="tabs">
-          <NavLink to="/Blog" id="blog">
+          <NavLink to="/news" id="blog">
             NEWS
           </NavLink>
           <NavLink to="/reviews" id="reviews">

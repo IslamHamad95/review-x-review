@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import ContactUs from "./ContactUs"
 
-const Topic = ({ postsArray, match,userEmail }) => {
+const ShowNewsPost = ({ postsArray, match,userEmail }) => {
   const post = postsArray.find((post) => {
     if (post.id === match.params.id) {
       return post;
@@ -37,4 +37,4 @@ const mapStatetoProps = (state) => {
 
 
 
-export default connect(mapStatetoProps)(Topic);
+export default connect(mapStatetoProps)(ShowNewsPost);

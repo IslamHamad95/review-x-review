@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Pagination from "./pagination";
 
-const Posts = ({ postsArray }) => {
+const News = ({ postsArray }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
 
@@ -24,7 +24,7 @@ const Posts = ({ postsArray }) => {
         {currentPosts
           .reverse()
           .map((post) => (
-          <Link key={post.id} to={`/blog/post/${post.id}`}>
+          <Link key={post.id} to={`/news/${post.id}`}>
             <div className="topic">
               <div id="title">{post.title}</div>
             </div>
@@ -48,4 +48,4 @@ export const mapStatetoProps = (state) => {
   };
 };
 
-export default connect(mapStatetoProps)(Posts);
+export default connect(mapStatetoProps)(News);
