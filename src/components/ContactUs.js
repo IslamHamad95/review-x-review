@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import { v4 as uuidV4 } from "uuid";
 
-const ContactUs = () => {
+const ContactUs = ({userName}) => {
   const [commentsArray, setCommentsArray] = useState([{
       id:"23232",
       name:"Islam",
@@ -50,7 +51,7 @@ const ContactUs = () => {
         <br />
         <input
           id="email-input"
-          value={newComment.name}
+          value={userName? userName:newComment.name}
           name="name"
           required
           onChange={addNewComment}
@@ -73,4 +74,10 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+const mapStateToProps = state=>{
+  return{
+    userName: state.user.userName
+  }
+}
+
+export default connect(mapStateToProps) (ContactUs);

@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { v4 as uuidV4 } from "uuid";
 import { addPost } from "../redux/posts/Actions";
 
-function AddPost({ addPost }) {
+function AddPost({ userName, addPost }) {
   const [newPost, setNewPost] = useState({
     id: 0,
     title: "",
@@ -18,7 +18,7 @@ function AddPost({ addPost }) {
       ...newPost,
       id: uuidV4(),
       [e.target.name]: e.target.value,
-      author: "Islam Hamad",
+      author: userName,
     });
   };
   const saveImage = (e) => {
@@ -80,11 +80,15 @@ function AddPost({ addPost }) {
   );
 }
 
-
+const mapStateToProps=state=>{
+  return{
+    userName: state.user.userName
+  }
+}
 const mapDispatchToProps = (dispatch) => {
   return {
     addPost: (post) => dispatch(addPost(post)),
   };
 };
 
-export default connect(null, mapDispatchToProps)(AddPost);
+export default connect(mapStateToProps, mapDispatchToProps)(AddPost);

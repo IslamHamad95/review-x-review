@@ -4,7 +4,7 @@ import {getUser} from "../redux/user/userActions"
 
 const Login = ({popUpFun,getUserData}) => {
   const [user, setUser]=useState({
-    email: "",
+    userName: "",
     password:""
   })
 
@@ -29,8 +29,8 @@ const Login = ({popUpFun,getUserData}) => {
       <section className="login">
         <h1>WELCOME BACK!</h1>
         <form className="login-form" onSubmit={loginUser}>
-          <label>Email: </label>
-          <input name="email" id="email" type="email" required onChange={userData} value={user.email}/>
+          <label>UserName: </label>
+          <input name="userName" id="email" required onChange={userData} value={user.userName}/>
           <label>Password:</label>
           <input name="password" id="password" type="password" onChange={userData} required value={user.password} />
           <div></div>

@@ -62,3 +62,9 @@
 #delete-button:hover{
     background-color: rgb(192, 4, 4);
 }
+
+#post-author{
+    float: right;
+    margin:1% 10% ;
+    color:#d38406;
+}

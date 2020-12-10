@@ -1,6 +1,6 @@
 import {GET_USER_DATA} from "./userActionsType"
 const initialUser={
-    email:"",
+    userName:"",
     password:""
 }
 
@@ -8,7 +8,7 @@ const userReducer=(state=initialUser, action)=>{
     switch (action.type){
         case(GET_USER_DATA):
         return({
-            email: action.payload.email,
+            userName: action.payload.userName,
             password: action.payload.password
         })
         default: return state

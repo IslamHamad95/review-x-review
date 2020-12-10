@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import logo from "../storage/logo.png";
 import Login from "./Login";
 
-const Header = ({ userEmail }) => {
+const Header = ({ userName }) => {
   const [popUp, setPopUp] = useState(false);
   const togglePopUp = () => {
     setPopUp((popUp) => (popUp = !popUp));
@@ -32,7 +32,7 @@ const Header = ({ userEmail }) => {
           >
             PODCAST
           </a>
-          {userEmail ? (
+          {userName ? (
             <div className="logged-in">
               <NavLink to="/addpost" id="login-signup">
                 ADD POST
@@ -42,7 +42,7 @@ const Header = ({ userEmail }) => {
         </div>
 
         <div className="auth">
-          {userEmail ? (
+          {userName ? (
             <div className="logged-in">
               <a href="/" id="login-signup">
                 SIGN OUT
@@ -62,7 +62,7 @@ const Header = ({ userEmail }) => {
 
 const mapStatetoProps = (state) => {
   return {
-    userEmail: state.user.email,
+    userName: state.user.userName,
   };
 };
 
