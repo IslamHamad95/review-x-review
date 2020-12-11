@@ -9,7 +9,6 @@ import ContactUs from "./components/ContactUs";
 import Login from "./components/Login"
 import Footer from "./components/footer";
 import Reviews from "./components/Reviews";
-import EditPost from "./components/EditPost";
 import ShowNewsPost from "./components/ShowNewsPost";
 import ShowReviewPost from"./components/ShowReviewPost.js";
 import News from "./components/News";
