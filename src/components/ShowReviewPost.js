@@ -3,11 +3,7 @@ import { connect } from "react-redux";
 import ContactUs from "./ContactUs"
 
 const ShowReviewPost = ({ postsArray, match,userName }) => {
-  const post = postsArray.find((post) => {
-    if (post.id === match.params.id) {
-      return post;
-    }
-  });
+  const post = postsArray.find((post) => post.id === match.params.id);
 
   return (
     <div className="show-post">
@@ -16,9 +12,9 @@ const ShowReviewPost = ({ postsArray, match,userName }) => {
         <h2 id="post-author">Written by {post.author}</h2>
       </div>
       {
-        (userName==post.author)?(
+        (userName===post.author)?(
           <div className="edit-delete-buttons">
-          <a><button id="edit-button">EDIT</button></a>
+          <button id="edit-button">EDIT</button>
           <button id="delete-button">DELETE</button>
           </div>
         ):null
