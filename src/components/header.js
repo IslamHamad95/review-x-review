@@ -18,13 +18,12 @@ const Header = ({ userName }) => {
   return (
     <div>
     <span className="open-slide" onClick={displaySideBar}>
-    <a href="#">
+    
       <svg width="50" height="40">
         <path d="M0,10 50,10" stroke="#fff" strokeWidth="7" />
         <path d="M0,25 50,25" stroke="#fff" strokeWidth="7" />
         <path d="M0,40 50,40" stroke="#fff" strokeWidth="7" />
       </svg>
-    </a>
   </span>
       
         {sidebar ? (

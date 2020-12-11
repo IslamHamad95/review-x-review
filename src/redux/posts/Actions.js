@@ -7,9 +7,3 @@ export const addPost=(post)=>{
     }
 }
 
-export const getPost=(id)=>{
-    return{
-        type: GET_POST,
-        id:id,
-    }
-}
