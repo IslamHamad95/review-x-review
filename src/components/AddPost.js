@@ -10,7 +10,7 @@ function AddPost({ userName, addPost }) {
     title: "",
     body: "",
     photo: newImage,
-    category: "Review",
+    category: "News",
     date: new Date().toDateString(),
   });
 
@@ -67,8 +67,8 @@ function AddPost({ userName, addPost }) {
         <br />
         <label htmlFor="category">Category:</label>
         <select name="category" onChange={saveCategory}>
-          <option value="Review">Review</option>
           <option value="News">News</option>
+          <option value="Review">Review</option>
         </select>
         <br />
 

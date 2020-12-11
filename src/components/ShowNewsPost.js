@@ -16,7 +16,7 @@ const ShowNewsPost = ({ postsArray, match,userName }) => {
         <h2 id="post-author">Written by {post.author}</h2>
       </div>
       {
-        userName?(
+        (userName==post.author)?(
           <div className="edit-delete-buttons">
           <a><button id="edit-button">EDIT</button></a>
           <button id="delete-button">DELETE</button>
