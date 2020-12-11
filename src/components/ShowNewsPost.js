@@ -13,9 +13,9 @@ const ShowNewsPost = ({ postsArray, match, userName }) => {
       </div>
       {userName === post.author ? (
         <div className="edit-delete-buttons">
-          <a>
+          
             <button id="edit-button">EDIT</button>
-          </a>
+          
           <button id="delete-button">DELETE</button>
         </div>
       ) : null}
