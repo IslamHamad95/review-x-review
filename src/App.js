@@ -22,13 +22,12 @@ const App = () => {
       <div>
         <Header />
         <Switch>
-        <Route path="/" exact component={LandingPage}></Route>
+        <Route path="/" exact component={LandingPage}/>
         <Route path="/news" exact  component={News}/>
         <Route path="/reviews" component={Reviews}/>
         <Route path="/news/:id" component={ShowNewsPost}/>
         <Route path="/review/:id" component={ShowReviewPost}/>
         <Route path="/addpost" component={AddPost}/>
-        <Route path="/editpost" component={EditPost}/>
         <Route path="/contactus" component={ContactUs}/>
         <Route path="/login" component={Login}/>
         </Switch>
