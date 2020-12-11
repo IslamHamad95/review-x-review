@@ -1,97 +1,164 @@
-*{
-    background-color: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  
-  }
-  p{
-    font-family: 'Times New Roman', Times, serif;
-  
-  }
-  button{
-    border:none;
-    background-color: inherit;
-  }
+* {
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav {
+  display: none;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+button {
+  border: none;
+  background-color: inherit;
+}
 
-  img {
-    object-fit: cover;
-  }
-  a{
-    text-decoration: none;
-    background-color:inherit;
-  
-    
-  }
-  a:hover{
-    text-decoration: underline;
-    cursor: pointer;
-    color: #d38406;
-  }
-  
-  header{
-    position: fixed;
-    top:0%;
-    z-index: 1;
-    width:90%;
-    background-color: black;
-    padding:1% 5%;
-    margin:0;
-    display: flex;
-    color: white;
+img {
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  background-color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #d38406;
+}
 
-  }
-  
-  #logo{
-    background-color: inherit;
-    width: 100%;
-    margin-left:5% ;
-  }
+header {
+  position: fixed;
+  top: 0%;
+  z-index: 1;
+  width: 90%;
+  background-color: black;
+  padding: 1% 5%;
+  margin: 0;
+  display: flex;
+  color: white;
+}
 
-  .tabs, .auth{ 
-    background-color: inherit;
-    margin-top: 2%;
-    
-  }
-  .tabs >*, .auth>*, .logged-in>*{
-    background-color:  inherit;
-    color: white;
-    font-size: 3vh;
-    font-weight: 700;
-  }
+#logo {
+  background-color: inherit;
+  width: 100%;
+  margin-left: 5%;
+}
 
-  .tabs{
-    display: grid;
-    grid-template-columns: auto auto auto 45%;
-    column-gap: 15%;
-    width:20%;
-    padding-left: 2%;
-    margin-left: 15%;
-  }
-  .auth{
-    width: fit-content;
-    margin-left: 30%;
-    
-  }
-  
-  .tabs #contact-us, .tabs #add-post{
-    background-color: inherit;
-    margin-left: 20%;
-  
-   
-  }
+.tabs,
+.auth {
+  background-color: inherit;
+  margin-top: 2%;
+}
+.tabs > *,
+.auth > *,
+.logged-in > * {
+  background-color: inherit;
+  color: white;
+  font-size: 3vh;
+  font-weight: 700;
+}
 
-  .auth #login-signup{
-    border: none;
-  }
+.tabs {
+  display: grid;
+  grid-template-columns: auto auto auto 45%;
+  column-gap: 15%;
+  width: 20%;
+  padding-left: 2%;
+  margin-left: 15%;
+}
+.auth {
+  width: fit-content;
+  margin-left: 30%;
+}
 
+.tabs #contact-us,
+.tabs #add-post {
+  background-color: inherit;
+  margin-left: 20%;
+}
+
+.auth #login-signup {
+  border: none;
+}
 
 /*Mobile*/
 
-@media screen and (max-width:1024px){
+@media screen and (max-width: 1024px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    display: none;
+  }
 
-}
+  nav {
+    display: block;
+    background-color: black;
+    position: absolute;
+    top: 0%;
+    width: 35vh;
+    height: 100%;
+    z-index: 1;
+    animation: slideInLeft 0.5s;
+  }
+  .navbar > * {
+    background-color: inherit;
+  }
 
-@media screen and (max-width:690px){
+  .nav-tabs {
+    background-color: inherit;
+    margin-top: 50%;
+    
+  }
+  .nav-tabs > * {
+    
+    background-color: inherit;
+    margin-bottom: 20%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 3vh;
+  }
+
+  .navbar #login-nav{
+    margin-left: 34%;
+  }
+
+  .nav-tabs a {
+    color: white;
+  }
+  .nav-tabs a:hover {
+    color: #d38406;
+  }
+
+  .open-slide {
+    float: left;
+    position: absolute;
+    top: 4%;
+    z-index: 2;
+    background-color: none;
+  }
+  svg {
+    background-color: black;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
   
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
+
+  @media screen and (max-width: 690px) {
+
+    
+  }
+

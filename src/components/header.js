@@ -6,12 +6,51 @@ import Login from "./Login";
 
 const Header = ({ userName }) => {
   const [popUp, setPopUp] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
   const togglePopUp = () => {
     setPopUp((popUp) => (popUp = !popUp));
   };
 
+  const displaySideBar = () => {
+    setSidebar(sidebar=>(sidebar = !sidebar));
+  };
+
   return (
     <div>
+    <span class="open-slide" onClick={displaySideBar}>
+    <a href="#">
+      <svg width="50" height="40">
+        <path d="M0,10 50,10" stroke="#fff" stroke-width="7" />
+        <path d="M0,25 50,25" stroke="#fff" stroke-width="7" />
+        <path d="M0,40 50,40" stroke="#fff" stroke-width="7" />
+      </svg>
+    </a>
+  </span>
+      
+        {sidebar ? (
+          <nav className="navbar">
+          <ul className="nav-tabs">
+          <li>
+          <NavLink to="/">Home</NavLink>
+          </li>
+            <li id="news-nav">
+              <NavLink to="/news">News</NavLink>
+            </li>
+            <li id="reviews-nav">
+              <NavLink to="/reviews">REVIEWS</NavLink>
+            </li>
+            <li id="podcast-nav">
+              <a href="https://anchor.fm/checkpod">PODCAST</a>
+            </li>
+          
+              <button id="login-nav" onClick={togglePopUp}>
+                SIGN IN
+              </button>
+           
+          </ul>
+          </nav>
+        ) : null}
+      
       <header>
         <NavLink to="/">
           <img id="logo" alt="logo" src={logo}></img>

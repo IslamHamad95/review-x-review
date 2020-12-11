@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { v4 as uuidV4 } from "uuid";
 import { addPost } from "../redux/posts/Actions";
+import newImage from"../storage/loba.png"
 
 function AddPost({ userName, addPost }) {
   const [newPost, setNewPost] = useState({
     id: 0,
     title: "",
     body: "",
-    photo: "",
+    photo: newImage,
     category: "Review",
     date: new Date().toDateString(),
   });
@@ -21,18 +22,14 @@ function AddPost({ userName, addPost }) {
       author: userName,
     });
   };
-  const saveImage = (e) => {
-    setNewPost({
-      ...newPost,
-      photo: e.target.files[0].name,
-    });
-  };
+
   const saveCategory = (e) => {
     setNewPost({
       ...newPost,
       category: e.target.value,
     });
   };
+
   const submitNewPost = (e) => {
     e.preventDefault();
     addPost(newPost);
@@ -41,7 +38,7 @@ function AddPost({ userName, addPost }) {
       title: "",
       body: "",
       category: "Review",
-      photo: "",
+ 
     });
   };
 
@@ -68,14 +65,16 @@ function AddPost({ userName, addPost }) {
           onChange={UpdatingNewPost}
         ></textarea>
         <br />
-        <input id="upload-path" type="file"  onChange={saveImage} />
         <label htmlFor="category">Category:</label>
         <select name="category" onChange={saveCategory}>
           <option value="Review">Review</option>
           <option value="News">News</option>
         </select><br/>
-        <input id="submit-button" type="submit" value="ADD POST" />
+  
+        <input id="submit-button" type="submit" value="ADD POST"  />
       </form>
+
+     
     </div>
   );
 }
