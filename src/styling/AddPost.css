@@ -1,7 +1,7 @@
 .add-post-form {
   width: 80%;
-  margin-left: 5%;
-  margin-top:8%;
+  margin:8% 5%;
+  
 }
 
 .add-post-form #title-input {
@@ -53,4 +53,11 @@
   font-size: 3vh;
   background-color: white;
   resize: none;
+}
+
+@media screen and (max-width: 1024px){
+
+  .add-post-form{
+    margin:17% 9%;
+  }
 }

@@ -69,7 +69,8 @@
 .post-info{
   display: grid;
   width: 100%;
-  grid-template-columns: 15% 69% auto;
+  grid-template-columns: 15% 50% auto;
+  column-gap: 5%;
   background:inherit
 }
 .post-info>*{
@@ -103,4 +104,20 @@
   to {
     transform: translate3d(0, 0, 0);
   }
+}
+
+/*Mobile*/
+@media screen and (max-width: 1024px){
+  .landing-page-container{
+    margin:0;
+  }
+
+  .landing-page-container .latest-posts{
+    display: grid;
+    width: 90%;
+    grid-template-columns:auto;
+  }
+}
+@media screen and (max-width: 690px){
+
 }

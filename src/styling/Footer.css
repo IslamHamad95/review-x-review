@@ -1,8 +1,11 @@
 footer{
+    position: static;
+    width: 100%;
+    bottom: 0%;
     background-color: green;
     text-align: center;
     font-size: 2vh;
     font-weight: bold;
     color: white;
-    padding: 1%;
+    padding: 1% 0%;
 }

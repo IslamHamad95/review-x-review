@@ -13,6 +13,7 @@ const ShowReviewPost = ({ postsArray, match,userEmail }) => {
     <div className="show-post">
       <div className="title-border">
         <h2 id="post-title">{post.title}</h2>
+        <h2 id="post-author">Written by {post.author}</h2>
       </div>
       {
         userEmail?(

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { v4 as uuidV4 } from "uuid";
 import { addPost } from "../redux/posts/Actions";
-import newImage from"../storage/loba.png"
+import newImage from "../storage/loba.png";
 
 function AddPost({ userName, addPost }) {
   const [newPost, setNewPost] = useState({
@@ -38,7 +38,6 @@ function AddPost({ userName, addPost }) {
       title: "",
       body: "",
       category: "Review",
- 
     });
   };
 
@@ -65,25 +64,25 @@ function AddPost({ userName, addPost }) {
           onChange={UpdatingNewPost}
         ></textarea>
         <br />
+        <br />
         <label htmlFor="category">Category:</label>
         <select name="category" onChange={saveCategory}>
           <option value="Review">Review</option>
           <option value="News">News</option>
-        </select><br/>
-  
-        <input id="submit-button" type="submit" value="ADD POST"  />
-      </form>
+        </select>
+        <br />
 
-     
+        <input id="submit-button" type="submit" value="ADD POST" />
+      </form>
     </div>
   );
 }
 
-const mapStateToProps=state=>{
-  return{
-    userName: state.user.userName
-  }
-}
+const mapStateToProps = (state) => {
+  return {
+    userName: state.user.userName,
+  };
+};
 const mapDispatchToProps = (dispatch) => {
   return {
     addPost: (post) => dispatch(addPost(post)),

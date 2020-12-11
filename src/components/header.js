@@ -46,6 +46,8 @@ const Header = ({ userName }) => {
               <button id="login-nav" onClick={togglePopUp}>
                 SIGN IN
               </button>
+
+              
            
           </ul>
           </nav>

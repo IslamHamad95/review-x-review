@@ -1,70 +1,96 @@
-.show-post{
+.show-post {
   width: 100%;
-  margin-top:6%;
-
+  margin-top: 6%;
 }
 
-.show-post .title-border{
-    background-image: url("../storage/loba.png");
-    background-color:rgba(255, 0, 0);
-    opacity: 0.8;
-    height: 50vh;
-    margin-bottom: 2%;
+.show-post .title-border {
+  background-image: url("../storage/loba.png");
+  background-color: rgba(255, 0, 0);
+  opacity: 0.8;
+  height: 50vh;
+  margin-bottom: 2%;
 }
 
-
-.show-post .title-border #post-title{
-    width:100%;
-    height: 50vh;
-   position: relative;
-   text-align: center;
-   line-height: 40vh;
-    font-size:7vh;
-    font-weight: bold;
-    color: white;
-    background-color:rgba(4, 131, 57, 0.8);;
+.show-post .title-border #post-title {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  text-align: center;
+  line-height: 40vh;
+  font-size: 7vh;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(4, 131, 57, 0.8);
 }
 
-.show-post #post-body{
-    font-size: 4vh;
-    overflow: hidden;
-    line-break: auto;
-    width: 70%;
-    margin: 2% 15%;
+.show-post #post-body {
+  font-size: 4vh;
+  overflow: hidden;
+  line-break: auto;
+  width: 70%;
+  margin: 2% 15%;
 }
 
 .edit-delete-buttons {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 6%;
+  width: 10%;
+  float: left;
+  margin-left: 2%;
+}
+
+#edit-button,
+#delete-button {
+  width: 100%;
+  font-size: 2.5vh;
+  font-weight: 600;
+  color: white;
+  padding: 6% 6%;
+  border: 2px solid black;
+}
+#edit-button {
+  background-color: green;
+}
+#edit-button:hover {
+  background-color: rgb(2, 172, 2);
+}
+#delete-button {
+  background-color: rgb(168, 2, 2);
+}
+#delete-button:hover {
+  background-color: rgb(192, 4, 4);
+}
+
+#post-author {
+  float: right;
+  margin: 1% 10%;
+  color: #d38406;
+}
+
+@media screen and (max-width: 1024px) {
+  .show-post {
+    margin: 0;
+  }
+  .show-post .title-border #post-title {
+    font-size: 4vh;
+  }
+  .show-post #post-body {
+    font-size: 3vh;
+  }
+  .show-post #post-author {
+    font-size: 2vh;
+  }
+  .edit-delete-buttons {
     display: grid;
     grid-template-rows: auto auto;
     row-gap: 6%;
-    width: 10%; 
-    float: left;
-    margin-left: 2%;
-}
+    width: 15%;
+    margin: 4% 2%;
+  }
 
-#edit-button, #delete-button{
-    width: 100%;
-    font-size: 2.5vh;
-    font-weight: 600;
-    color: white;
-    padding:6% 6%;
-    border:2px solid black
-}
-#edit-button{
-    background-color: green;
-}
-#edit-button:hover{
-    background-color: rgb(2, 172, 2);
-}
-#delete-button{
-    background-color: rgb(168, 2, 2);
-}
-#delete-button:hover{
-    background-color: rgb(192, 4, 4);
-}
-
-#post-author{
-    float: right;
-    margin:1% 10% ;
-    color:#d38406;
+  #edit-button,
+  #delete-button {
+    font-size: 2vh;
+  }
 }
