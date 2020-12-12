@@ -98,8 +98,14 @@
     .contact-us-form #message-input{
         width: 90%;
     }
+    .contact-us-form #submit-button{
+        font-size: 2vh;
+    }
     .contact-us-form label{
         font-size:2.5vh;
+    }
+    .comments #date{
+        font-size:1.5vh;
     }
 
 }
