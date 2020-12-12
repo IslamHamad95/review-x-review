@@ -120,7 +120,7 @@
   .post-box #post-title{
     font-size:2.5vh;
   }
-  .post-box #category, .post-box #author{
+  .post-box #category, .post-box #author, .post-box #date{
     font-size: 2vh;
   }
 }

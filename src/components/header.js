@@ -41,11 +41,26 @@ const Header = ({ userName }) => {
             <li id="podcast-nav">
               <a href="https://anchor.fm/checkpod">PODCAST</a>
             </li>
+
+            {userName ? (
+              <div className="logged-in">
+                <a href="/" id="login-signup">
+                  SIGN OUT
+                </a>
+              </div>
+            ) : (
           
               <button id="login-nav" onClick={togglePopUp}>
                 SIGN IN
-              </button>
+              </button>)}
 
+              {userName ? (
+                <div className="logged-in">
+                  <NavLink to="/addpost" id="login-signup">
+                    ADD POST
+                  </NavLink>
+                </div>
+              ) : null}
               
            
           </ul>

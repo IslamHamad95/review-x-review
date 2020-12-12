@@ -96,7 +96,7 @@ header {
 
   nav {
     display: block;
-    background-color: black;
+   background-color: black;
     position: absolute;
     top: 0%;
     width: 35vh;
@@ -157,8 +157,5 @@ header {
   }
 }
 
-  @media screen and (max-width: 690px) {
 
-    
-  }
 
