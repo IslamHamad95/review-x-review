@@ -17,17 +17,15 @@ const Header = ({ userName }) => {
 
   return (
     <div>
-    <span className="open-slide" onClick={displaySideBar}>
-    
-      <svg width="50" height="40">
-        <path d="M0,10 50,10" stroke="#fff" strokeWidth="7" />
-        <path d="M0,25 50,25" stroke="#fff" strokeWidth="7" />
-        <path d="M0,40 50,40" stroke="#fff" strokeWidth="7" />
-      </svg>
+    <span className="hamburger" onClick={displaySideBar}>
+    <div className="line"></div>
+    <div className="line"></div>
+    <div className="line"></div>
   </span>
       
         {sidebar ? (
           <nav className="navbar">
+          <div className="x" onClick={displaySideBar}>x</div>
           <ul className="nav-tabs">
           <li>
           <NavLink to="/">Home</NavLink>
