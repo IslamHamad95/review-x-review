@@ -11,13 +11,14 @@
 
 .show-post #post-image{
   object-fit:cover;
+  width: 100%;
 
 }
 .show-post .title-border #post-title {
   width: 100%;
+  height: 50vh;
   position: absolute;
   text-align: center;
-  line-height: 50vh;
   font-size: 7vh;
   font-weight: bold;
   color: white;

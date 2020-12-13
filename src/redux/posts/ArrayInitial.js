@@ -36,7 +36,7 @@ export const arrayInitalState = {
 
     {
       id: "3",
-      title: "TLOU2 COULD DOMINATE THA GAME AWARDS",
+      title: "TLOU2 COULD DOMINATE THE GAME AWARDS",
       body: initialPostBody,
       category: "News",
       author: "Islam Hamad",
