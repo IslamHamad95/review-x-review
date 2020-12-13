@@ -11,7 +11,6 @@
 
 .show-post #post-image{
   object-fit:cover;
-  width: 100%;
 
 }
 .show-post .title-border #post-title {
@@ -76,6 +75,7 @@
   .show-post {
     margin: 0;
   }
+  
   .show-post .title-border #post-title {
     font-size: 4vh;
   }
@@ -98,5 +98,14 @@
   #edit-button,
   #delete-button {
     font-size: 2vh;
+  }
+}
+
+@media screen and (max-width:800px){
+  .show-post #post-image{
+    object-fit:cover;
+    height: 100%;
+    
+  
   }
 }
