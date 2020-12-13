@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import postImg from "../../storage/loba.png";
 
 const NewsSection = ({ postsArray }) => {
   const [gamingNews, setGamingNews] = useState([]);
@@ -28,7 +27,7 @@ const NewsSection = ({ postsArray }) => {
           <img
             id="landing-page-header-image"
             alt=""
-            src={gamingNews[gamingNews.length - 1].photo}
+            src={gamingNews[gamingNews.length -4].photo}
           />
         </Link>
 
@@ -37,7 +36,7 @@ const NewsSection = ({ postsArray }) => {
           {gamingNews.map((post) => (
             <div className="post-box" key={post.id}>
               <Link to={`/news/${post.id}`} key={post.id}>
-                <img id="post-image" alt="postimg" src={postImg} />
+                <img id="post-image" alt="postimg" src={post.photo} />
                 <h1 id="post-title"> {post.title}</h1>
               </Link>
               <div className="post-info">

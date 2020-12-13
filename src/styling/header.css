@@ -94,7 +94,7 @@ header {
     display: none;
   }
   .hamburger {
-    background: none;
+    background: rgb(255, 255, 255, 0.5);
     padding: 1%;
     position: fixed;
     top: 3%;
@@ -164,9 +164,7 @@ header {
     z-index: 2;
     background-color: none;
   }
-  svg {
-    background-color: black;
-  }
+
 
   @keyframes slideInLeft {
     from {
