@@ -19,18 +19,14 @@ const NewsSection = ({ postsArray }) => {
     return (
       <div>
         {" "}
-        <Link
-          to={`/news/${gamingNews[0].id}`}
-          className="landing-page-header"
-        >
+        <Link to={`/news/${gamingNews[0].id}`} className="landing-page-header">
           <h1 id="landing-page-header-title">{gamingNews[0].title}</h1>
           <img
             id="landing-page-header-image"
             alt=""
-            src={gamingNews[gamingNews.length -4].photo}
+            src={gamingNews[gamingNews.length - 4].photo}
           />
         </Link>
-
         <h1 id="latest-news">LATEST NEWS</h1>
         <section className="latest-posts">
           {gamingNews.map((post) => (

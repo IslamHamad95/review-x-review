@@ -9,8 +9,9 @@ const ShowReviewPost = ({ postsArray, match,userName }) => {
     <div className="show-post">
       <div className="title-border">
         <h2 id="post-title">{post.title}</h2>
-        <h2 id="post-author">Written by {post.author}</h2>
+        <img id="post-image" alt="" src={post.photo} />
       </div>
+      <h2 id="post-author">Written by {post.author}</h2>
       {
         (userName===post.author)?(
           <div className="edit-delete-buttons">
