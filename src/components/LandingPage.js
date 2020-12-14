@@ -3,13 +3,14 @@ import Footer from "./footer";
 import NewsSection from "./subsections/NewsSection";
 import ReviewsSection from "./subsections/ReviewsSection";
 
-
 function LandingPage() {
   return (
-    <div className="landing-page-container">
-      <NewsSection />
-      <ReviewsSection/>
-      <Footer/>
+    <div>
+      <div className="landing-page-container">
+        <NewsSection />
+        <ReviewsSection />
+      </div>
+      <Footer />
     </div>
   );
 }
