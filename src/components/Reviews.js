@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import Pagination from "./pagination";
 
 const Posts = ({ postsArray }) => {
@@ -24,11 +23,11 @@ const Posts = ({ postsArray }) => {
         {currentPosts
           .reverse()
           .map((post) => (
-          <Link key={post.id} to={`/review/${post.id}`}>
+          <a key={post.id} href={`/review/${post.id}`}>
             <div className="topic">
               <div id="title">{post.title}</div>
             </div>
-          </Link>
+          </a>
         ))}
         <Pagination
           className="pagination"

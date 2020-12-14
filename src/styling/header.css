@@ -39,6 +39,10 @@ header {
   display: flex;
   color: white;
 }
+.selected{
+  color: green;
+
+}
 
 #logo {
   background-color: inherit;

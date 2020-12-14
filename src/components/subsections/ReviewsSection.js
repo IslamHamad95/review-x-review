@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 
 const ReviewsSection = ({postsArray}) => {
@@ -25,10 +24,10 @@ const ReviewsSection = ({postsArray}) => {
               {gamingReviews
                 .map((post) => (
                   <div className="post-box" key={post.id}>
-                    <Link to={`/review/${post.id}`} key={post.id}>
+                    <a href={`/review/${post.id}`} key={post.id}>
                       <img loading="lazy" id="post-image" src={post.photo} alt={post.title} />
                       <h1 id="post-title"> {post.title}</h1>
-                    </Link>
+                    </a>
                     <div className="post-info">
                       <h2 id="category">{post.category}</h2>
                       <h2 id="author">{post.author}</h2>

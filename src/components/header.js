@@ -25,16 +25,16 @@ const Header = ({ userName }) => {
       
         {sidebar ? (
           <nav className="navbar">
-          <div className="x" onClick={displaySideBar}>x</div>
+        
           <ul className="nav-tabs">
           <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink  to="/" onClick={displaySideBar}>HOME</NavLink>
           </li>
             <li id="news-nav">
-              <NavLink to="/news">News</NavLink>
+              <NavLink to="/news" onClick={displaySideBar}>NEWS</NavLink>
             </li>
             <li id="reviews-nav">
-              <NavLink to="/reviews">REVIEWS</NavLink>
+              <NavLink to="/reviews" onClick={displaySideBar}>REVIEWS</NavLink>
             </li>
             <li id="podcast-nav">
               <a href="https://anchor.fm/checkpod">PODCAST</a>
@@ -71,10 +71,10 @@ const Header = ({ userName }) => {
         </NavLink>
 
         <div className="tabs">
-          <NavLink to="/news" id="blog">
+          <NavLink activeClassName="selected" to="/news" id="blog">
             NEWS
           </NavLink>
-          <NavLink to="/reviews" id="reviews">
+          <NavLink activeClassName="selected" to="/reviews" id="reviews">
             REVIEWS
           </NavLink>
           <a
