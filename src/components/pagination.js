@@ -6,18 +6,18 @@ const Pagination = (props) => {
   for (let i = 1; i <= Math.round(props.totalPosts / props.postsPerPage); i++) {
     PageNumbers.push(i);
   }
-
+  console.log(props.totalPosts)
   return (
-    <nav
+    <div
       className="pagination"
       style={
-        props.currentPosts.length > 10
+        props.totalPosts >= 10
           ? { display: "block" }
           : { display: "none" }
       }
     >
       {PageNumbers.map((number) => (
-        <button
+        <button id="number"
           tabIndex="0"
           role="link"
           type="button"
@@ -28,7 +28,7 @@ const Pagination = (props) => {
           {number}
         </button>
       ))}
-    </nav>
+    </div>
   );
 };
 
