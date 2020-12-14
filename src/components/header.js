@@ -48,7 +48,7 @@ const Header = ({ userName }) => {
               </div>
             ) : (
           
-              <button id="login-nav" onClick={togglePopUp}>
+              <button style={{display:"none"}} id="login-nav" onClick={togglePopUp}>
                 SIGN IN
               </button>)}
 
@@ -102,7 +102,7 @@ const Header = ({ userName }) => {
               </a>
             </div>
           ) : (
-            <button id="login-signup" onClick={togglePopUp}>
+            <button style={{display:"none"}} id="login-signup" onClick={togglePopUp}>
               SIGN IN
             </button>
           )}
