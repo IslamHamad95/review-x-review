@@ -22,6 +22,7 @@ const NewsSection = ({ postsArray }) => {
         <Link to={`/news/${gamingNews[0].id}`} className="landing-page-header">
           <h1 id="landing-page-header-title">{gamingNews[0].title}</h1>
           <img
+          loading="lazy"
             id="landing-page-header-image"
             alt=""
             src={gamingNews[gamingNews.length - 4].photo}
@@ -32,7 +33,7 @@ const NewsSection = ({ postsArray }) => {
           {gamingNews.map((post) => (
             <div className="post-box" key={post.id}>
               <Link to={`/news/${post.id}`} key={post.id}>
-                <img id="post-image" alt="postimg" src={post.photo} />
+                <img loading="lazy" id="post-image" alt="postimg" src={post.photo} />
                 <h1 id="post-title"> {post.title}</h1>
               </Link>
               <div className="post-info">
