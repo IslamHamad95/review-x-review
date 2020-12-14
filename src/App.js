@@ -7,7 +7,6 @@ import { Provider } from "react-redux";
 import store from "./redux/store"
 import ContactUs from "./components/ContactUs";
 import Login from "./components/Login"
-import Footer from "./components/footer";
 import Reviews from "./components/Reviews";
 import ShowNewsPost from "./components/ShowNewsPost";
 import ShowReviewPost from"./components/ShowReviewPost.js";
@@ -32,7 +31,6 @@ const App = () => {
         </Switch>
         </div>
       </BrowserRouter>
-      <Footer/>
     </div>
     </Provider>
   );
