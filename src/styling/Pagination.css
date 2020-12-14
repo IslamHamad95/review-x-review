@@ -16,5 +16,10 @@
 }
 
 @media screen and (max-width:1024px){
+  .pagination #number{
+    margin:2% 4% ;
+    border-radius:5px ;
+    padding: 4% 4%;
+  }
 
 }
