@@ -32,7 +32,7 @@ const NewsSection = ({ postsArray }) => {
           {gamingNews.map((post) => (
             <div className="post-box" key={post.id}>
               <Link to={`/news/${post.id}`} key={post.id}>
-                <img lLinkding="lazy" id="post-image" alt="postimg" src={post.photo} />
+                <img id="post-image" alt="postimg" src={post.photo} />
                 <h1 id="post-title"> {post.title}</h1>
               </Link>
               <div className="post-info">
