@@ -118,10 +118,12 @@ header {
     background-color: black;
 
     top: 0%;
+    min-width: 0vh;
     width: 35vh;
     height: 100%;
     z-index: 1;
-    animation: slideInLeft 0.5s;
+    transition: ease-in;
+    transition-duration: 0.5s;
   }
   .navbar .x {
     color: #d38406;
