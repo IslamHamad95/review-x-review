@@ -39,9 +39,8 @@ header {
   display: flex;
   color: white;
 }
-.selected{
+.selected {
   color: green;
-
 }
 
 #logo {
@@ -112,26 +111,20 @@ header {
     margin: 5px;
   }
 
-  nav {
+  .navbar {
     position: fixed;
     display: block;
     background-color: black;
-
+    left: 0%;
     top: 0%;
     min-width: 0vh;
-    width: 35vh;
+    width: 0;
     height: 100%;
-    z-index: 1;
-    transition: ease-in;
-    transition-duration: 0.5s;
+    z-index: 2;
+    transition:ease-in;
+    transition-duration:0.7s ;
   }
-  .navbar .x {
-    color: #d38406;
-    float: right;
-    font-size: 4vh;
-    font-weight: bold;
-    padding: 12% 10%;
-  }
+
   .navbar .x:hover {
     cursor: pointer;
   }
@@ -172,14 +165,4 @@ header {
   }
 
 
-  @keyframes slideInLeft {
-    from {
-      transform: translate3d(-100%, 0, 0);
-      visibility: visible;
-    }
-
-    to {
-      transform: translate3d(0, 0, 0);
-    }
-  }
 }

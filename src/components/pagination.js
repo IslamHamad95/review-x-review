@@ -3,7 +3,7 @@ import React from "react";
 const Pagination = (props) => {
   const PageNumbers = [];
 
-  for (let i = 1; i <= Math.round(props.totalPosts / props.postsPerPage); i++) {
+  for (let i = 1; i < Math.round(props.totalPosts / props.postsPerPage); i++) {
     PageNumbers.push(i);
   }
  

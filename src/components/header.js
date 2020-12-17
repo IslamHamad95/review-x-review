@@ -43,7 +43,7 @@ const Header = ({ userName }) => {
       </span>):null}
 
       {sidebar ? (
-        <nav ref={wrapperRef} className="navbar">
+        <nav style={sidebar?{width:"35vh"}: {width:"0"}} ref={wrapperRef} className="navbar">
           <ul className="nav-tabs">
             <li>
               <NavLink to="/" onClick={displaySideBar}>
