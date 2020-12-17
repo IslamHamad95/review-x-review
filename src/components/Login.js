@@ -16,7 +16,6 @@ const Login = ({popUpFun,getUserData}) => {
   }
   const loginUser=(e)=>{
     e.preventDefault()
-    console.log(user)
     getUserData(user)
     popUpFun()
 

@@ -16,7 +16,7 @@ const ReviewsSection = ({postsArray}) => {
       }, [postsArray]);
     
       if (gamingReviews.length) {
-        console.log(gamingReviews[0].id);
+      
         return (
           <div>
             <h1 id="latest-news">LATEST REVIEWS</h1>

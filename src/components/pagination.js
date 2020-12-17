@@ -6,7 +6,7 @@ const Pagination = (props) => {
   for (let i = 1; i <= Math.round(props.totalPosts / props.postsPerPage); i++) {
     PageNumbers.push(i);
   }
-  console.log(props.totalPosts)
+ 
   return (
     <div
       className="pagination"
